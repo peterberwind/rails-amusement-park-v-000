@@ -1,0 +1,24 @@
+<%= form_for @user do |f| %>
+  <%= f.label :name  %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %>
+
+  <%= f.label :height %>
+  <%= f.text_field :height, class: "form-control" %>
+
+  <%= f.label :happiness  %>
+  <%= f.text_field :happiness, class: "form-control" %>
+
+  <%= f.label :nausea  %>
+  <%= f.text_field :nausea, class: "form-control" %>
+
+  <%= f.label :tickets  %>
+  <%= f.text_field :tickets, class: "form-control" %>
+
+  <%= f.label :admin  %>
+  <%= f.check_box :admin, class: "form-control" %>
+
+  <%= f.submit %>
+<% end %>
