@@ -25,17 +25,19 @@
           <ul class="nav navbar-nav">
             <!--  nav here -->
             <% if user_signed_in? %>
-              <li><%= link_to "Hello, #{@user.name}", user_path(@user) %></li>
-              <li><%= link_to "Log out", signout_path, :method => :delete %></li>
+              <li><%= link_to "Hello, #{current_user.name}", user_path(current_user) %></li>
+              <li><%= link_to "Attractions", attractions_path %></li>
+              <li><%= link_to "Log Out", signout_path, :method => :delete %></li>
             <% else %>
               <li><%= link_to "Sign in", signin_path %></li>
               <li><%= link_to "Sign up", new_user_path %></li>
             <% end %>
-
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
+
+    <p id="notice"><%= notice %></p>
 
     <!-- content -->
     <div class="container"  role="main">

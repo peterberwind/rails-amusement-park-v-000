@@ -1,7 +1,15 @@
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+<% if @user.admin %>
+  <h1>ADMIN</h1>
+<% end %>
+
 Name: <%= @user.name %>
 Height: <%= @user.height %>
 Happiness: <%= @user.happiness %>
-Nausea: <%= @user.nausea %>
 Tickets: <%= @user.tickets %>
-Admin: <%= @user.admin %>
 Mood: <%= @user.mood %>
+
+<%= link_to "See attractions", attractions_path %>
